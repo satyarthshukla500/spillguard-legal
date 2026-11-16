@@ -1,7 +1,7 @@
 # Spillguard privacy policy
 
-Last updated: 14 November 2026
-Contact: satyarthshukla004@gmail.com / Satyarth Shukla
+Last updated: 16 November 2026
+Contact: satyarthshukla86@gmail.com / Satyarth Shukla
 
 Spillguard is an app for Atlassian Cloud (Jira and Confluence). It checks text that is posted to customers on Jira Service Management requests and tells you when it copies a restricted Confluence page.
 
@@ -13,7 +13,7 @@ When it runs, Spillguard reads, through Atlassian's own APIs and with the permis
 
 ## What it stores
 Spillguard stores data in Atlassian's Forge hosted storage for your site, and nowhere else:
-- for each restricted page: its title and fingerprints (one-way hashes) of its text. The page text itself is not stored;
+- for each restricted page: its title and fingerprints of its text (salted hashes, not the text; anyone who can read the app's stored data could still test guesses against them). The page text itself is not stored;
 - the owning teams of the page's space: the team's id, name and number of members;
 - a list of alerts: time, work item key or page, titles of the matched restricted pages, what Spillguard did, and the owning team;
 - a random value used for hashing and markers of what was already reported.
@@ -29,7 +29,7 @@ The data is only available to the app on your site and to the app developer thro
 - Page fingerprints and team entries are replaced each time an administrator re-indexes.
 - Alerts older than 90 days are deleted at each re-index. The other markers are kept until the app is uninstalled.
 - When you uninstall Spillguard, Atlassian keeps the app's stored data for 28 days and then deletes it. When a site is permanently deleted, the app data is deleted with it.
-- To ask a question about the data, contact satyarthshukla004@gmail.com.
+- To ask a question about the data, contact satyarthshukla86@gmail.com.
 
 ## Personal data
 Spillguard does not store personal data (no account IDs, names or e-mail addresses). Page titles and work item keys that appear in alerts belong to your content and can be as sensitive as your content is. Reading a page, comment or team through Atlassian's APIs while the app runs is covered by the permissions you approved at install.
